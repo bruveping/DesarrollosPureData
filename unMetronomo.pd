@@ -1,0 +1,124 @@
+#N canvas 50 69 1195 800 10;
+#X obj 132 17 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 131 38 \; pd dsp \$1;
+#X obj 341 109 metro 500;
+#X obj 341 131 i;
+#X obj 341 153 + 1;
+#X obj 333 75 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 371 132 0;
+#X floatatom 506 110 5 0 0 0 - - -, f 5;
+#X obj 507 88 /;
+#X msg 504 64 60000;
+#X obj 506 42 t b b;
+#X obj 508 21 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 588 14 vsl 30 350 20 300 0 0 empty empty empty 0 -9 0 10 -260097
+-1 -1 12464 1;
+#X obj 586 373 i;
+#X obj 586 395 nbx 4 30 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+27 -257985 -1 -1 120 256;
+#X obj 547 67 i;
+#X obj 308 312 bng 40 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 341 197 % 4;
+#X floatatom 341 220 5 0 0 0 - - -, f 5;
+#X obj 340 285 sel 0 1 2 3;
+#X obj 386 324 bng 25 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 312 398 vline~;
+#X obj 66 293 mtof;
+#X floatatom 66 273 5 0 0 0 - - -, f 5;
+#X floatatom 66 315 20 0 0 0 - - -, f 20;
+#X obj 142 434 *~;
+#X obj 138 485 dac~;
+#X obj 160 383 noise~;
+#X obj 221 455 vsl 15 128 0 3000 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X floatatom 221 591 5 0 0 0 - - -, f 5;
+#X msg 650 54 120;
+#X msg 649 15 130;
+#X msg 649 34 125;
+#X msg 650 76 110;
+#X msg 651 98 100;
+#X msg 651 119 80;
+#X msg 651 139 70;
+#X msg 652 159 60;
+#X obj 412 189 i;
+#X obj 412 212 + 1;
+#X obj 412 233 nbx 2 20 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+18 -4034 -1 -1 4 256;
+#X obj 142 457 lop~ 708.6;
+#X floatatom 341 175 5 0 0 0 - - -, f 5;
+#X text 347 484 VLINE~ si el mensaje luego de la " \, " no tiene delay:
+0 1 "200" \, el mensaje llega al mismo tiempo y no se escucha nada!
+;
+#X obj 76 382 osc~ 880;
+#X obj 679 55 loadbang;
+#X obj 333 55 loadbang;
+#X msg 108 351 1046.5;
+#X msg 168 352 880;
+#X obj 105 404 *~ 0.2;
+#X obj 160 402 *~ 0.07;
+#X msg 239 363 1 3 \, 0.4 1 6 \, 0 50 50;
+#X msg 380 361 0.3 3 \, 0.1 1 6 \, 0 50 50;
+#X connect 0 0 1 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 3 1;
+#X connect 4 0 42 0;
+#X connect 5 0 2 0;
+#X connect 6 0 3 1;
+#X connect 7 0 2 1;
+#X connect 8 0 7 0;
+#X connect 9 0 8 0;
+#X connect 10 0 9 0;
+#X connect 10 1 15 0;
+#X connect 11 0 10 0;
+#X connect 12 0 13 0;
+#X connect 13 0 14 0;
+#X connect 14 0 15 1;
+#X connect 14 0 11 0;
+#X connect 15 0 8 1;
+#X connect 16 0 51 0;
+#X connect 17 0 18 0;
+#X connect 18 0 19 0;
+#X connect 18 0 38 0;
+#X connect 19 0 16 0;
+#X connect 19 0 47 0;
+#X connect 19 1 20 0;
+#X connect 19 1 48 0;
+#X connect 19 2 20 0;
+#X connect 19 3 20 0;
+#X connect 20 0 52 0;
+#X connect 21 0 25 1;
+#X connect 22 0 24 0;
+#X connect 23 0 22 0;
+#X connect 24 0 44 0;
+#X connect 25 0 41 0;
+#X connect 27 0 50 0;
+#X connect 28 0 29 0;
+#X connect 29 0 41 1;
+#X connect 30 0 12 0;
+#X connect 31 0 12 0;
+#X connect 32 0 12 0;
+#X connect 33 0 12 0;
+#X connect 34 0 12 0;
+#X connect 35 0 12 0;
+#X connect 36 0 12 0;
+#X connect 37 0 12 0;
+#X connect 38 0 39 0;
+#X connect 39 0 40 0;
+#X connect 41 0 26 0;
+#X connect 41 0 26 1;
+#X connect 42 0 17 0;
+#X connect 44 0 49 0;
+#X connect 45 0 30 0;
+#X connect 46 0 5 0;
+#X connect 47 0 44 0;
+#X connect 48 0 44 0;
+#X connect 49 0 25 0;
+#X connect 50 0 25 0;
+#X connect 51 0 21 0;
+#X connect 52 0 21 0;
