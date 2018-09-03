@@ -1,0 +1,18 @@
+#N canvas 0 50 1280 942 10;
+#X obj 428 672 throw~ Dacis;
+#X obj 529 670 throw~ Dacder;
+#X obj 452 478 noise~;
+#X obj 483 581 *~;
+#X obj 452 500 *~ 0.6;
+#X obj 472 538 hip~ 10000;
+#X obj 484 611 *~;
+#X obj 762 464 inlet~;
+#X obj 657 392 inlet~;
+#X connect 2 0 4 0;
+#X connect 3 0 6 0;
+#X connect 4 0 5 0;
+#X connect 5 0 3 0;
+#X connect 6 0 1 0;
+#X connect 6 0 0 0;
+#X connect 7 0 6 1;
+#X connect 8 0 3 1;
